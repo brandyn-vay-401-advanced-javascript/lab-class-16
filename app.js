@@ -1,6 +1,11 @@
 'use strict';
 
 const fs = require('fs');
+const events = require('./src/models/events-module.js');
+
+require('./src/models/logger-module.js');
+
+events.emit();
 
 const alterFile = (file) => {
   fs.readFile( file, (err, data) => {
