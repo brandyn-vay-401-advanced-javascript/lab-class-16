@@ -1,7 +1,7 @@
 'use strict';
 
-const Events = require('events');
+let Events = require('events');
 
-const events = new Events();
+let events = new Events();
 
 module.exports = events;

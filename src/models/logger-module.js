@@ -2,8 +2,17 @@
 
 const events = require('./events-module.js');
 
-// events.on('create', payload => doLog('create', payload));
-// events.on('delete', payload => doLog('delete', payload));
-// events.on('update', payload => doLog('update', payload));
+events.on('error', payload => doLog('error', payload));
+events.on('success', payload => doLog('success', payload));
 
-events.on((err => { throw err; }));
+
+/**
+ *
+ *
+ * @param {*} action
+ * @param {*} payload
+ */
+function doLog(action, payload){
+  let message = `${action.toUpperCase()}`;
+  console.log(message, payload);
+}
