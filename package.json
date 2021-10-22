@@ -5,13 +5,17 @@
   "main": "app.js",
   "scripts": {
     "test": "jest --verbose --coverage",
-    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json"
+    "jsdoc": "jsdoc -c ./docs/config/jsdoc.config.json",
+    "prepare": "npm run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "eslint": "6.1.0",
     "jest": "^24.8.0",
-    "jsdoc": "3.6.3"
-  }
+    "jsdoc": "3.6.3",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
